@@ -1,0 +1,63 @@
+.settings {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+
+  &__title {
+    width: auto;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+  }
+  &__toggle {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    vertical-align: middle;
+    fill: #cccccc;
+    transition: transform .2s ease-out;
+    &:hover {
+      fill: #828282;
+      transform: rotate(-90deg);
+    }
+    &:active {
+      fill: #505050;
+    }
+    &:active {
+      fill: #505050;
+    }
+  }
+  &__rule {
+     padding-bottom: 10px;
+  }
+
+  @media (min-width: 414px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .2s ease-out;
+
+    &--opened {
+      transform: translate3d(0, 0, 0);
+    }
+    &__title {
+      width: auto;
+      margin: 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      text-decoration: none;
+    }
+    &__toggle {
+      display: block;
+    }
+  }
+}

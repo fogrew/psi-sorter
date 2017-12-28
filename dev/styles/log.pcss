@@ -1,0 +1,32 @@
+.loader {
+  text-align: center;
+}
+.log {
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .3s, transform .3s;
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &__line{
+    &:first-child {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    &--fine {
+      opacity: 0.2;
+      transition: opacity .3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__impact,
+  &__error {
+    color: #a94442;
+  }
+}

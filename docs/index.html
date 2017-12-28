@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PSI Sorter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This page return results of Page Speed Insights. Just sorted. With score on each suggestion. On your chosen language.">
+    <link rel="dns-prefetch" href="//www.googleapis.com">
+    <link rel="preconnect" href="https://www.googleapis.com" crossorigin>
+</head>
+<body>
+<link rel="stylesheet" href="css/styles.css">
+    <header class="header">
+        <svg class="header__logo" role="img">
+            <use xmlns="http://www.w3.org/2000/svg" xlink:href="i/index.symbol.svg#psi"></use>
+        </svg>
+        <h1 class="header__title">PSI Sorter</h1>
+        <p class="header__text">This page return results of Page Speed Insights. Just sorted. With score on each suggestion. On your chosen language.</p>
+    </header>
+    <form action="https://www.googleapis.com/pagespeedonline/v2/runPagespeed" method="get" id="check" name="check" target="_blank" class="form">
+        <fieldset class="form__line settings">
+            <legend class="settings__title">Settings PSI:</legend>
+            <svg class="settings__toggle" role="button" aria-pressed="false" aria-label="settings">
+                <use xmlns="http://www.w3.org/2000/svg" xlink:href="i/index.symbol.svg#settings"></use>
+            </svg>
+            <div class="settings__rule">
+                <label for="locale">locale: </label>
+                <select name="locale" id="locale" class="input" aria-describedby="locale">
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="de">Deutsch</option>
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="pt">Português Brasileiro</option>
+                    <option value="ru">Русский</option>
+                    <option value="ja">日本語</option>
+                    <option value="zh">简体中文</option>
+                    <option value="ko">한국어</option>
+                </select>
+            </div>
+            <div class="settings__rule">
+                <label for="priority">priority: </label>
+                <input type="number" name="priority" min="0" max="100" maxlength="3" size="3" step="1" id="priority" value="3" placeholder="3" pattern="\d{,3}" list="defaultPriority" class="input" aria-describedby="priority">
+                <datalist id="defaultPriority">
+                    <option value="3">
+                    <option value="30">
+                    <option value="50">
+                    <option value="60">
+                    <option value="70">
+                    <option value="80">
+                    <option value="90">
+                </datalist>
+            </div>
+        </fieldset>
+        <fieldset name="main">
+            <div class="form__line strategy">
+                <span>strategy: </span>
+                <label><input type="radio" name="strategy" value="desktop" checked> desktop</label>
+                <label><input type="radio" name="strategy" value="mobile"> mobile</label>
+            </div>
+            <div class="form__line form__line--group">
+                <input type="url" id="url" name="url" class="input" autofocus required placeholder="paste url" value="https://www.wrike.com/apps/software-it/github/">
+                <input type="submit" name="submit" id="submit" value="check" class="button button--primary" >
+            </div>
+        </fieldset>
+        <div class="loader">
+            <div class="spinner" id="loader"></div>
+        </div>
+        <output id="result" name="result" class="log"></output>
+    </form>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

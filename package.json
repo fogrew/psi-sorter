@@ -1,0 +1,60 @@
+{
+  "name": "psi-sorter",
+  "version": "1.0.0",
+  "description": "Sorted localised results of Page Speed Insights with score for each suggestion",
+  "keywords": [
+    "Page Speed Insights",
+    "PageSpeedInsights",
+    "speed",
+    "performance",
+    "analitycs"
+  ],
+  "author": {
+    "name": "Andrey Gurylev",
+    "email": "andrey.gurylev@team.wrike.com",
+    "url": "https://git.wrke.in/andrey.gurylev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gurylev/psi-sorter/issues"
+  },
+  "homepage": "https://github.com/Gurylev/psi-sorter#readme",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run gulp",
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gurylev/psi-sorter.git"
+  },
+  "engines": {
+    "node": ">=8.6.0",
+    "npm": ">=5.3.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.22.0",
+    "del": "^3.0.0",
+    "eslint": "^4.14.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso-usage": "^0.1.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.2",
+    "gulp-svg-sprite": "^1.3.7",
+    "gulp-uglify": "^3.0.0",
+    "http2": "^3.3.7",
+    "minimist": "^1.2.0",
+    "postcss-csso": "^3.0.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-partial-import": "^4.1.0",
+    "postcss-scss": "^1.0.2",
+    "uglify-es": "^3.3.3"
+  }
+}
